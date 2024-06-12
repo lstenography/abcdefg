@@ -1,0 +1,11 @@
+.heading {
+  display: flex;
+  justify-content: center;
+
+  margin-top: 17px;
+
+  font-family: f1-torque, f1-reg, Cambria, Cochin, Georgia, Times,
+    "Times New Roman", serif;
+  font-size: 3.2rem;
+  color: rgb(0, 0, 0);
+}

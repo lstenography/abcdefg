@@ -1,0 +1,18 @@
+@font-face {
+    font-family: jetBrains;
+    src: url(../resources/fonts/JetBrainsMono-Medium.woff2);
+}
+@font-face {
+    font-family: f1-reg;
+    src: url(../resources/fonts/Formula1\ Display\ Regular.ttf);
+}
+
+html {
+    font-size: 62.5%;
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    font-family: jetBrains, 'Courier New', Courier, monospace;
+}
