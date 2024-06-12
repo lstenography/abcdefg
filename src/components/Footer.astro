@@ -2,17 +2,40 @@
 ---
 
 <footer>
-    <h1>Our Partners:</h1>
+    <h1>Our Partners</h1>
     <div class="decor"></div>
-    <div class="logos">
+    <div class="logos1">
         <img src="../../resources/img/logos/aramco.avif" alt="">
         <img src="../../resources/img/logos/AWS GLOBAL.avif" alt="">
         <img src="../../resources/img/logos/crypto.com.avif" alt="">
         <img src="../../resources/img/logos/dhl.avif" alt="">
         <img src="../../resources/img/logos/Heineken - Outlined.avif" alt="">
         <img src="../../resources/img/logos/pirelli.avif" alt="">
-        <img src="../../resources/img/logos/quatar.avif" alt="">
+        <img src="../../resources/img/logos/qatar.avif" alt="">
         <img src="../../resources/img/logos/rolex.avif" alt="">
+    </div>
+
+    <div class="decor2"></div>
+
+    <div class="logos2">
+        <img src="resources/img/logos/188.png" alt="">
+        <img src="resources/img/logos/Amex.png" alt="">
+        <img src="resources/img/logos/BBS.png" alt="">
+        <img src="resources/img/logos/mcdonalds.png" alt="">
+        <img src="resources/img/logos/puma.png" alt="">
+        <img src="resources/img/logos/TATA.png" alt="">
+        <img src="resources/img/logos/Workday.png" alt="">
+    </div>
+
+    <div class="decor2"></div>
+
+    <div class="menu">
+        <img src="../../resources/img/f1.png" alt="">
+        <div class="qa">
+            <a href="../pages/index.astro">Home</a>
+            <a href="../pages/circuits.astro">Circuits</a>
+            <a href="../pages/teams.astro">Teams</a>
+        </div>
     </div>
 </footer>
 
@@ -26,31 +49,75 @@
         margin: 0;
         
 
-        background-color: rgba(20, 20, 20, 1);
+        background-color: rgba(30, 30, 30, 1);
 
         padding: 2rem;
         margin-top: 2rem;
 
         h1 {
             color: white;
-            font-family: f1-torque;
+            font-family: f1-reg;
             font-size: 2rem;
+            margin-bottom: 4rem
         }
 
         .decor {
-            width: 80%;
+            width: 85%;
             height: 1px;
-            background-color: rgba(255, 255, 255, 0.5);
+            background-color: rgba(255, 255, 255, 0.4);
         }
 
-        .logos {
+        .decor2 {
+            width: 85%;
+            height: 1px;
+            background-color: rgba(255, 255, 255, 0.4);
+
+            margin: 2rem;
+        }
+
+        .logos1 {
             display: flex;
             justify-content: center;
-            gap: 2rem;
+            gap: 3rem;
             margin-top: 0rem;
 
             img {
                 height: 8vh;
+            }
+        }
+
+        .logos2 {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-top: 0rem;
+
+            img {
+                height: 6vh;
+            }
+        }
+
+        .menu {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 60vw;
+            margin-top: 2rem;
+
+            img {
+                height: 8vh;
+            }
+
+            .qa {
+                display: flex;
+                justify-content: center;
+                gap: 2rem;
+
+                a {
+                    color: white;
+                    font-family: f1-reg;
+                    font-size: 1.8rem;
+                }
             }
         }
 
