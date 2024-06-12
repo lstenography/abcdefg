@@ -3,15 +3,16 @@
 
 <footer>
     <h1>Our Partners:</h1>
+    <div class="decor"></div>
     <div class="logos">
-        <img src="images/logos/aramco.avif" alt="">
-        <img src="images/logos/AWS GLOBAL.avif" alt="">
-        <img src="images/logos/crypto.com.avif" alt="">
-        <img src="images/logos/dhl.avif" alt="">
-        <img src="images/logos/Heineken - Outlined.avif" alt="">
-        <img src="images/logos/pirelli.avif" alt="">
-        <img src="images/logos/quatar.avif" alt="">
-        <img src="images/logos/rolex.avif" alt="">
+        <img src="../../resources/img/logos/aramco.avif" alt="">
+        <img src="../../resources/img/logos/AWS GLOBAL.avif" alt="">
+        <img src="../../resources/img/logos/crypto.com.avif" alt="">
+        <img src="../../resources/img/logos/dhl.avif" alt="">
+        <img src="../../resources/img/logos/Heineken - Outlined.avif" alt="">
+        <img src="../../resources/img/logos/pirelli.avif" alt="">
+        <img src="../../resources/img/logos/quatar.avif" alt="">
+        <img src="../../resources/img/logos/rolex.avif" alt="">
     </div>
 </footer>
 
@@ -19,8 +20,11 @@
 <style>
     footer {
         display: flex;
+        flex-direction: column;
         justify-content: center;
+        align-items: center;
         margin: 0;
+        
 
         background-color: rgba(20, 20, 20, 1);
 
@@ -31,6 +35,23 @@
             color: white;
             font-family: f1-torque;
             font-size: 2rem;
+        }
+
+        .decor {
+            width: 80%;
+            height: 1px;
+            background-color: rgba(255, 255, 255, 0.5);
+        }
+
+        .logos {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 0rem;
+
+            img {
+                height: 8vh;
+            }
         }
 
     }
