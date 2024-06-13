@@ -1,18 +1,18 @@
 @font-face {
   font-family: jetBrains;
-  src: url(../resources/fonts/JetBrainsMono-Medium.woff2);
+  src: url(/fonts/JetBrainsMono-Medium.woff2);
 }
 @font-face {
   font-family: f1-reg;
-  src: url(../resources/fonts/Formula1\ Display\ Regular.ttf);
+  src: url(/fonts/Formula1\ Display\ Regular.ttf);
 }
 @font-face {
   font-family: f1-torque;
-  src: url(../resources/fonts/Formula1-Torque.otf);
+  src: url(/fonts/Formula1-Torque.otf);
 }
 @font-face {
     font-family: f1-turbo;
-    src: url(../resources/fonts/f1-turbo.otf);
+    src: url(/fonts/f1-turbo.otf);
 }
 
 html {
