@@ -1,0 +1,25 @@
+---
+interface Props {
+    name: string;
+    country: string;
+    imgPath: string;
+}
+
+const { name, country, imgPath } = Astro.props;
+---
+
+<div class='cir'>
+    <div class='locations'>
+        <div class='text'>
+            <h2 class='name'>{name}</h2>
+            <h2 class='country'>{country}</h2>
+        </div>
+        <img src={`/img/flags/${imgPath}.avif`} alt='' />
+    </div>
+
+    <div class='decor'></div>
+
+    <img src={`/img/circuits/${imgPath}.avif`} alt='' class='circuit' />
+
+    <div class='decor'></div>
+</div>

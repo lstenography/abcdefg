@@ -1,92 +1,170 @@
 ---
-import Navigation from "../components/Navigation.astro"
-import Footer from "../components/Footer.astro"
-import "../../styles/circuits.css"
-import "../../styles/global.css"
+import Navigation from "../components/Navigation.astro";
+import Footer from "../components/Footer.astro";
+import "../../styles/circuits.css";
+import "../../styles/global.css";
+import Circuit from "../components/Circuit.astro";
 ---
-<!DOCTYPE html>
+
+<!doctype html>
 <html lang="en">
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <Navigation />
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <Navigation />
 
-    <div class="title">
-        <h1 class="heading">Circuits</h1>
-    </div>
-
-    <div class="circuits">
-        <div class="bahrain cir">
-
-            <div class="locations">
-                <div class="text">
-                    <h2 class="name">Sakhir Grand Prix </h2>
-                    <h2 class="country">Bahrain</h2>
-                </div>
-                <img src="/img/flags/bahrain.avif" alt="">
-            </div>
-
-            <div class="decor"></div>
-
-            <img src="/img/circuits/bahrain.avif" alt="" class="circuit">
-
-            <div class="decor"></div>
-
+        <div class="title">
+            <h1 class="heading">Circuits</h1>
         </div>
 
-        <div class="jeddah cir"></div>
+        <div class="circuits">
+            <Circuit
+                name="Bahrain Grand Prix"
+                country="Bahrain"
+                imgPath="bahrain"
+            />
 
-        <div class="melbourne cir"></div>
+            <Circuit
+                name="Jeddah Corniche"
+                country="Saudi Arabia"
+                imgPath="saudi-arabia"
+            />
 
-        <div class="suzuka cir"></div>
+            <Circuit
+                name="Melbourne Grand Prix"
+                country="Australia"
+                imgPath="australia"
+            />
 
-        <div class="shanghai cir"></div>
+            <Circuit 
+                name="Suzuka Circuit"
+                country="Japan"
+                imgPath="japan"
+            />
 
-        <div class="miami cir"></div>
+            <Circuit
+                name="Shanghai Circuit"
+                country="China"
+                imgPath="china"
+            />
 
-        <div class="imola cir"></div>
+            <Circuit
+                name="Miami Autodrome"
+                country="United States"
+                imgPath="miami"
+            />
 
-        <div class="monaco cir"></div>
+            <Circuit
+                name="Imola"
+                country="Italy"
+                imgPath="italy"
+            />
 
-        <div class="montreal cir"></div>
+            <Circuit
+                name="Mexico City"
+                country="Mexico"
+                imgPath="mexico"
+            />
 
-        <div class="barcelona cir"></div>
+            <Circuit
+                name="Circuit de Monaco"
+                country="Monaco"
+                imgPath="monaco"
+            />"
 
-        <div class="spielberg cir"></div>
+            
+        </div>
 
-        <div class="silverstone cir"></div>
+        <div class="circuits"></div>
 
-        <div class="hungaroring cir"></div>
-
-        <div class="spa cir"></div>
-
-        <div class="zandvoort cir"></div>
-
-        <div class="monza cir"></div>
-
-        <div class="baku cir"></div>
-
-        <div class="marina-bay cir"></div>
-
-        <div class="austin cir"></div>
-
-        <div class="mexico cir"></div>
-
-        <div class="interlagos cir"></div>
-
-        <div class="vegas cir"></div>
-
-        <div class="lusail cir"></div>
-
-        <div class="yas-marina cir"></div>
-
-    </div>
-
-    <div class="circuits"></div>
-
-    <Footer />
-    
-</body>
+        <Footer />
+    </body>
 </html>
+
+<style>
+    .heading {
+        display: flex;
+        justify-content: center;
+
+        margin-top: 17px;
+
+        font-family: f1-torque, f1-reg, Cambria, Cochin, Georgia, Times,
+            "Times New Roman", serif;
+        font-size: 3.2rem;
+        color: rgb(0, 0, 0);
+    }
+
+    .circuits {
+        display: grid;
+
+        grid-template-columns: repeat(3, 1fr);
+        gap: 5%;
+
+        margin: 3.5%;
+
+        .cir {
+            display: flex;
+            flex-direction: column;
+            padding: 3%;
+
+            border-top-right-radius: 5%;
+            border-bottom-left-radius: 5%;
+            border-top: 3px;
+            border-right: 2px;
+            border-bottom: 0;
+            border-left: 0;
+            border-style: solid;
+
+            background-color: rgb(247, 247, 247);
+
+            /* background-image: url(../public/img/bkg.png); */
+
+            .locations {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .text {
+                    h2 {
+                        margin-top: 4px;
+                        margin-bottom: 4px;
+
+                        font-size: 1.3rem;
+                    }
+
+                    .name {
+                        font-size: 2rem;
+                    }
+                    .country {
+                        color: rgb(180, 0, 0);
+                    }
+                }
+                img {
+                    width: 70px;
+                    border-color: rgba(0, 0, 0, 0.222);
+                    border-width: 1px;
+                    border-radius: 10px;
+                    border-style: solid;
+                }
+            }
+        }
+        .decor {
+            width: 95%;
+            height: 1px;
+            background-color: rgb(154, 154, 154);
+            margin-left: 2.5%;
+            margin-top: 1%;
+        }
+
+        .circuit {
+            width: 85%;
+            margin-top: 0;
+            margin-bottom: 0;
+            margin-left: 7.5%;
+            margin-top: 3%;
+            margin-bottom: 3%;
+        }
+    }
+</style>
