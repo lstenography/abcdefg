@@ -12,74 +12,102 @@ import Circuit from "../components/Circuit.astro";
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Document</title>
     </head>
+
+
     <body>
+
         <Navigation />
 
         <div class="title">
-            <h1 class="heading">Circuits</h1>
+            <h1>Circuits</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, nobis.</p>
         </div>
 
+
+        
         <div class="circuits">
             <Circuit
                 name="Bahrain Grand Prix"
                 country="Bahrain"
                 imgPath="bahrain"
+                date="2 Mar"
+                round="1"
             />
 
             <Circuit
                 name="Jeddah Corniche"
                 country="Saudi Arabia"
                 imgPath="saudi-arabia"
+                date="9 Mar"
+                round="2"
             />
 
             <Circuit
                 name="Melbourne Grand Prix"
                 country="Australia"
                 imgPath="australia"
+                date="24 Mar"
+                round="3"
             />
 
             <Circuit 
                 name="Suzuka Circuit"
                 country="Japan"
                 imgPath="japan"
+                date="7 Apr"
+                round="4"
             />
 
             <Circuit
                 name="Shanghai Circuit"
                 country="China"
                 imgPath="china"
+                date="21 Apr"
+                round="5"
             />
 
             <Circuit
                 name="Miami Autodrome"
                 country="United States"
                 imgPath="miami"
+                date="5 May"
+                round="6"
             />
 
             <Circuit
                 name="Imola"
                 country="Italy"
                 imgPath="italy"
+                date="19 May"
+                round="7"
             />
 
-            <Circuit
-                name="Mexico City"
-                country="Mexico"
-                imgPath="mexico"
-            />
 
             <Circuit
                 name="Circuit de Monaco"
                 country="Monaco"
                 imgPath="monaco"
+                date="26 may"
+                round="8"
             />
 
             <Circuit
                 name="Circuit Gilles Villeneuve"
                 country="Canada"
                 imgPath="canada"
+                date="9 Jun"
+                round="9"
             />
 
+
+
+            <Circuit
+                name="Mexico City"
+                country="Mexico"
+                imgPath="mexico"
+                date="fasd"
+                round="26"
+            />
             
         </div>
 
@@ -90,25 +118,23 @@ import Circuit from "../components/Circuit.astro";
 </html>
 
 <style>
-    .heading {
-        display: flex;
-        justify-content: center;
-
-        margin-top: 17px;
-
-        font-family: f1-torque, f1-reg, Cambria, Cochin, Georgia, Times,
-            "Times New Roman", serif;
-        font-size: 3.2rem;
-        color: rgb(0, 0, 0);
+    
+    body {
+        background-color: rgb(240, 240, 240);
     }
+
+    .title {
+
+    }
+
 
     .circuits {
         display: grid;
 
         grid-template-columns: repeat(3, 1fr);
-        gap: 5%;
+        gap: 3.5%;
+        margin: 2%;
 
-        margin: 3.5%;
 
         .cir {
             display: flex;
@@ -118,12 +144,12 @@ import Circuit from "../components/Circuit.astro";
             border-top-right-radius: 5%;
             border-bottom-left-radius: 5%;
             border-top: 3px;
-            border-right: 2px;
+            border-right: 3px;
             border-bottom: 0;
             border-left: 0;
             border-style: solid;
 
-            background-color: rgb(247, 247, 247);
+            background-color: rgb(240, 240, 240);
 
             /* background-image: url(../public/img/bkg.png); */
 
@@ -142,6 +168,7 @@ import Circuit from "../components/Circuit.astro";
 
                     .name {
                         font-size: 2rem;
+                        font-family: f1-torque;
                     }
                     .country {
                         color: rgb(180, 0, 0);
@@ -155,22 +182,43 @@ import Circuit from "../components/Circuit.astro";
                     border-style: solid;
                 }
             }
+
+            .info {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 70%;
+
+                h1 {
+                    font-family: f1-torque, f1-reg;
+                    margin-top: 4px;
+                    margin-bottom: 4px;
+
+                    font-size: 1.4rem;
+                }
+
+                .round {
+                    font-family: f1-reg;
+                    color: rgb(180, 0, 0);
+                }
+            }
+
         }
         .decor {
             width: 95%;
             height: 1px;
             background-color: rgb(154, 154, 154);
             margin-left: 2.5%;
-            margin-top: 1%;
+            margin-top: 0.5%;
         }
 
         .circuit {
-            width: 85%;
+            width: 80%;
             margin-top: 0;
             margin-bottom: 0;
-            margin-left: 7.5%;
-            margin-top: 3%;
-            margin-bottom: 3%;
+            margin-left: 10%;
+            margin-top: 2%;
+            margin-bottom: 2%;
         }
     }
 </style>

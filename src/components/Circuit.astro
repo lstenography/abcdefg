@@ -3,9 +3,11 @@ interface Props {
     name: string;
     country: string;
     imgPath: string;
+    date: string;
+    round: string;
 }
 
-const { name, country, imgPath } = Astro.props;
+const { name, country, imgPath, date, round } = Astro.props;
 ---
 
 <div class='cir'>
@@ -22,4 +24,9 @@ const { name, country, imgPath } = Astro.props;
     <img src={`/img/circuits/${imgPath}.avif`} alt='' class='circuit' />
 
     <div class='decor'></div>
+
+    <div class="info">
+        <h1 class="date">{date}</h1>
+        <h1 class="round">Round {round}</h1>
+    </div>
 </div>
