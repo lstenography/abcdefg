@@ -101,9 +101,60 @@ import Circuit from "../components/Circuit.astro";
             />
 
             <Circuit
-                name
+                name="Barcelona de Cataluyna"
+                country="Spain"
+                imgPath="spain"
+                date="23 Jun"
+                round="10"
+            />
 
+            <Circuit 
+                name="Red Bull Ring"
+                country="Austria"
+                imgPath="austria"
+                date="30 Jun"
+                round="11"
+            />
 
+            <Circuit 
+                name="Silverstone Circuit"
+                country="United Kingdom"
+                imgPath="uk"
+                date="7 Jul"
+                round="12"
+            />
+
+            <Circuit
+                name="Hungaroring"
+                country="Hungary"
+                imgPath="hungary"
+                date="21 Jul"
+                round="13"
+            />    
+
+            <Circuit 
+                name="Spa-Francorchamps"
+                country="Belgium"
+                imgPath="belgium"
+                date="28 Jul"
+                round="14"
+            />
+
+            <Circuit 
+                name="Circuit Zandvoort"
+                country="Netherlands"
+                imgPath="netherlands"
+                date="25 Aug"
+                round="15"
+            />
+
+            <Circuit 
+                name="Monza"
+                country="Italy"
+                imgPath="monza"
+                date="1 Sep"
+                round="16"
+            />
 
             <Circuit
                 name="Mexico City"
@@ -163,7 +214,7 @@ import Circuit from "../components/Circuit.astro";
         display: grid;
 
         grid-template-columns: repeat(3, 1fr);
-        gap: 3.5%;
+        gap: 2.5%;
         margin: 2%;
         margin-bottom: 100vh;
 
@@ -210,8 +261,8 @@ import Circuit from "../components/Circuit.astro";
                 img {
                     width: 70px;
                     border-color: rgba(0, 0, 0, 0.222);
-                    border-width: 0.2vw;
-                    border-radius: 0.2vw;
+                    border-width: 2px;
+                    border-radius: 10px;
                     border-style: solid;
                 }
             }
