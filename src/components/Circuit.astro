@@ -10,24 +10,41 @@ interface Props {
 const { name, country, imgPath, date, round } = Astro.props;
 ---
 
-<div class='cir'>
-    <div class='locations'>
-        <div class='text'>
-            <h2 class='name'>{name}</h2>
-            <h2 class='country'>{country}</h2>
+<div class="carousel-view">
+
+    <button id="prev-button" class="prev-button"></button>
+
+    <div class="item-list">
+        <div class='cir'>
+            <div class='locations'>
+                <div class='text'>
+                    <h2 class='name'>{name}</h2>
+                    <h2 class='country'>{country}</h2>
+                </div>
+                <img src={`/img/flags/${imgPath}.avif`} alt='' />
+            </div>
+    
+            <div class='decor'></div>
+    
+            <img src={`/img/circuits/${imgPath}.avif`} alt='' class='circuit' />
+    
+            <div class='decor'></div>
+    
+            <div class="info">
+                <h1 class="date">{date}</h1>
+                <h1 class="round">Round {round}</h1>
+            </div>
         </div>
-        <img src={`/img/flags/${imgPath}.avif`} alt='' />
+        
+        <div class="desc"></div>
     </div>
 
-    <div class='decor'></div>
 
-    <img src={`/img/circuits/${imgPath}.avif`} alt='' class='circuit' />
+    <button id="next-btn" class="next-btn"></button>
 
-    <div class='decor'></div>
-
-    <div class="info">
-        <h1 class="date">{date}</h1>
-        <h1 class="round">Round {round}</h1>
-    </div>
 </div>
+
+
+
+
 

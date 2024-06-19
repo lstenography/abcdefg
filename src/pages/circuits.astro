@@ -275,8 +275,20 @@ import Circuit from "../components/Circuit.astro";
         margin: 2%;
         margin-bottom: 30vh;
 
+        .item-list {
+            scroll-snap-type: x mandatory;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+        .item-list::-webkit-scrollbar {
+            display: none;
+        }
+
 
         .cir {
+            scroll-snap-align: center;
+
+
             display: flex;
             flex-direction: column;
             padding: 3%;
@@ -284,8 +296,9 @@ import Circuit from "../components/Circuit.astro";
             width: auto;
             height: 36vh;
             
-            overflow-x: hidden;
-            overflow-y: auto;
+            /* overflow-x: scroll;
+            scrollbar-width: none;
+            overflow-y: auto; */
 
             border-top-right-radius: 5%;
             border-bottom-left-radius: 5%;
@@ -369,3 +382,5 @@ import Circuit from "../components/Circuit.astro";
         }
     }
 </style>
+
+<!-- https://medium.com/@algopoint.ltd/how-to-create-a-slideshow-carousel-using-html-css-js-7ab0561b39b3 -->
