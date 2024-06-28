@@ -10,41 +10,144 @@ interface Props {
 const { name, country, imgPath, date, round } = Astro.props;
 ---
 
-<div class="carousel-view">
+<div class="carousel-ctn">
+    <div class="carousel-view">
 
-    <button id="prev-button" class="prev-button"></button>
+        <button class="lbutton"></button>
 
-    <div class="item-list">
-        <div class='cir'>
-            <div class='locations'>
-                <div class='text'>
-                    <h2 class='name'>{name}</h2>
-                    <h2 class='country'>{country}</h2>
+        <div class="cir">
+            <div class="locations">
+                <div class="text">
+                    <h2 class="name">{name}</h2>
+                    <h2 class="country">{country}</h2>
                 </div>
-                <img src={`/img/flags/${imgPath}.avif`} alt='' />
+                <img src={`/img/flags/${imgPath}.avif`} alt="" />
             </div>
-    
-            <div class='decor'></div>
-    
-            <img src={`/img/circuits/${imgPath}.avif`} alt='' class='circuit' />
-    
-            <div class='decor'></div>
-    
+
+            <div class="decor"></div>
+
+            <img src={`/img/circuits/${imgPath}.avif`} alt="" class="circuit" />
+
+            <div class="decor"></div>
+
             <div class="info">
                 <h1 class="date">{date}</h1>
                 <h1 class="round">Round {round}</h1>
             </div>
         </div>
-        
-        <div class="desc"></div>
+
+        <div class="abcasd">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+        </div>
+
+        <button class="rbutton"></button>
+
     </div>
-
-
-    <button id="next-btn" class="next-btn"></button>
-
 </div>
 
+<style>
+    .carousel-ctn {
 
+    }
+    .carousel-view {
+        overflow: hidden;
+        max-width: 950px;
+        width: auto;
+        display: flex;
+        scroll-behavior: smooth;
+        scroll-snap-type: x mandatory;
+    }
+    .cir {
+        scroll-snap-align: center;
 
+        display: flex;
+        flex-direction: column;
+        padding: 3%;
 
+        width: auto;
+        height: 36vh;
 
+        /* overflow-x: scroll;
+            scrollbar-width: none;
+            overflow-y: auto; */
+
+        border-top-right-radius: 5%;
+        border-bottom-left-radius: 5%;
+        border-top: 2px;
+        border-right: 2px;
+        border-bottom: 0;
+        border-left: 0;
+        border-style: solid;
+        border-color: #4e4e4e;
+
+        background-color: rgb(240, 240, 240);
+
+        /* background-image: url(../public/img/bkg.png); */
+
+        .locations {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .text {
+                h2 {
+                    margin-top: 4px;
+                    margin-bottom: 4px;
+
+                    font-size: 1.3rem;
+                }
+
+                .name {
+                    font-size: 2rem;
+                    font-family: f1-torque;
+                }
+                .country {
+                    color: rgb(180, 0, 0);
+                }
+            }
+            img {
+                width: 70px;
+                border-color: rgba(0, 0, 0, 0.222);
+                border-width: 2px;
+                border-radius: 10px;
+                border-style: solid;
+            }
+        }
+
+        .info {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 70%;
+
+            h1 {
+                font-family: f1-torque, f1-reg;
+                margin-top: 4px;
+                margin-bottom: 4px;
+
+                font-size: 1.4rem;
+            }
+
+            .round {
+                font-family: f1-reg;
+                color: rgb(180, 0, 0);
+            }
+        }
+    }
+    .decor {
+        width: 95%;
+        height: 1px;
+        background-color: #9a9a9a;
+        margin-left: 2.5%;
+        margin-top: 0.5%;
+    }
+
+    .circuit {
+        width: 80%;
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-left: 10%;
+        margin-top: 2%;
+        margin-bottom: 2%;
+    }
+</style>
