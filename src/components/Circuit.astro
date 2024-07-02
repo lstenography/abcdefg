@@ -10,53 +10,34 @@ interface Props {
 const { name, country, imgPath, date, round } = Astro.props;
 ---
 
-<div class="carousel-ctn">
-    <div class="carousel-view">
-
-        <button class="lbutton"></button>
-
-        <div class="cir">
-            <div class="locations">
-                <div class="text">
-                    <h2 class="name">{name}</h2>
-                    <h2 class="country">{country}</h2>
-                </div>
-                <img src={`/img/flags/${imgPath}.avif`} alt="" />
-            </div>
-
-            <div class="decor"></div>
-
-            <img src={`/img/circuits/${imgPath}.avif`} alt="" class="circuit" />
-
-            <div class="decor"></div>
-
-            <div class="info">
-                <h1 class="date">{date}</h1>
-                <h1 class="round">Round {round}</h1>
-            </div>
+<div class="cir">
+    <div class="locations">
+        <div class="text">
+            <h2 class="name">{name}</h2>
+            <h2 class="country">{country}</h2>
         </div>
-
-        <div class="abcasd">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-        </div>
-
-        <button class="rbutton"></button>
-
+        <img src={`/img/flags/${imgPath}.avif`} alt="" />
     </div>
+
+    <div class="decor"></div>
+
+    <img src={`/img/circuits/${imgPath}.avif`} alt="" class="circuit" />
+
+    <div class="decor"></div>
+
+    <div class="info">
+        <h1 class="date">{date}</h1>
+        <h1 class="round">Round {round}</h1>
+    </div>
+    <!-- <div class="extra">
+        <div class="cir-info">
+
+        </div>
+    </div> -->
 </div>
 
-<style>
-    .carousel-ctn {
 
-    }
-    .carousel-view {
-        overflow: hidden;
-        max-width: 950px;
-        width: auto;
-        display: flex;
-        scroll-behavior: smooth;
-        scroll-snap-type: x mandatory;
-    }
+<style>
     .cir {
         scroll-snap-align: center;
 
@@ -66,6 +47,7 @@ const { name, country, imgPath, date, round } = Astro.props;
 
         width: auto;
         height: 36vh;
+        position: relative;
 
         /* overflow-x: scroll;
             scrollbar-width: none;
@@ -134,18 +116,31 @@ const { name, country, imgPath, date, round } = Astro.props;
             }
         }
     }
+
+    .extra {
+        position: absolute;
+        display: flex;
+        width: 100%;
+        top: 0;
+        left: 0;
+        height: 100%;
+        background-color: rgb(255, 255, 255);
+        z-index: 10;
+    }
+
     .decor {
         width: 95%;
-        height: 1px;
+        min-height: 1px;
         background-color: #9a9a9a;
         margin-left: 2.5%;
         margin-top: 0.5%;
+        z-index: 100;
     }
 
     .circuit {
         width: 80%;
-        margin-top: 0;
-        margin-bottom: 0;
+        margin-top: 1px;
+        margin-bottom: 1px;
         margin-left: 10%;
         margin-top: 2%;
         margin-bottom: 2%;
