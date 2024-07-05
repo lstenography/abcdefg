@@ -234,8 +234,13 @@ import Circuit from "../components/Circuit.astro";
 <style>
     
     body {
-        background-color: rgb(240, 240, 240);
+        background-color: rgb(250, 250, 250);
         height: auto;
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+        ::-webkit-scrollbar {
+            display: none;
+        }
     }
 
     .title {
@@ -272,10 +277,16 @@ import Circuit from "../components/Circuit.astro";
     .circuits {
         display: grid;
 
-        grid-template-columns: repeat(3, 1fr);
-        gap: 2.5%;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 4.5%;
         margin: 2%;
-        margin-bottom: 30vh;
+        margin-bottom: 80vh;
+
+        ::-webkit-scrollbar {
+            display: none;
+        }
+        scrollbar-width: none;
+        -ms-overflow-style: none;
 
         .item-list {
             scroll-snap-type: x mandatory;
