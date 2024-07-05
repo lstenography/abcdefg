@@ -47,7 +47,10 @@ const {
     </div>
 
     <div class="extra">
-        <h1>{name}</h1>
+        <div class="extra-title">
+            <h1>{name}</h1>
+            <img src={`/img/flags/${imgPath}.avif`} alt="" />
+        </div>
 
         <div class="cir-info">
             <div class="first-gp info-bg">
@@ -152,8 +155,13 @@ const {
     }
 
     .cir:hover .extra {
-        transition: opacity .5s ease-in-out;
+        transition: opacity .4s ease-in-out;
         opacity: 1;
+    }
+
+    .cir:hover {
+        border-color: rgb(180, 0, 0);
+        transition: border-color .4s ease-in-out;
     }
 
     .extra {
@@ -167,6 +175,7 @@ const {
         width: 100%;
         height: 100%;
         margin: 0;
+        
         top: 0;
         left: 0;
         border-top-right-radius: 25px;
@@ -187,17 +196,35 @@ const {
             font-family: f1-bold;
         }
 
+        img {
+            width: 70px;
+            border-color: rgba(0, 0, 0, 0.222);
+            border-width: 2px;
+            border-radius: 10px;
+            border-style: solid;
+        }
+        .extra-title {
+            margin-top: 5px;
+            margin-bottom: 5px;
+            display: flex;
+            justify-content: space-between;
+
+            h1 {
+                min-width: 100%;
+            }
+        }
+
         .cir-info {
             display: grid;
             justify-content: center;
             grid-template-columns: 1fr 1fr;
             grid-template-rows: 1fr 1fr;
             grid-row-gap: 30%;
-            grid-column-gap: 10%;
+            grid-column-gap: 8%;
 
             .info-bg {
                 /* background-color: rgb(240, 240, 240); */
-                width: 270px;
+                width: 280px;
                 height: 90px;
                 margin: 0;
 
@@ -221,6 +248,7 @@ const {
                     font-size: 1.2rem;
                     margin-top: 5px;
                     margin-bottom: 10px;
+                    color: rgb(180, 0, 0);
                 }
                 p {
                     font-family: f1-bold;
@@ -230,7 +258,7 @@ const {
                 }
                 span {
                     font-size: 1.4rem;
-                    
+                    color: rgb(180, 0, 0);
                 }
             }
 
@@ -263,3 +291,7 @@ const {
         margin-bottom: 2%;
     }
 </style>
+
+<script>
+
+</script>
