@@ -1,4 +1,6 @@
 ---
+
+
 interface Props {
     name: string;
     country: string;
@@ -26,7 +28,7 @@ const {
 } = Astro.props;
 ---
 
-<div class="cir">
+<div class="cir dark-theme">
     <div class="locations">
         <div class="text">
             <h2 class="name">{name}</h2>
@@ -46,7 +48,7 @@ const {
         <h1 class="round">Round {round}</h1>
     </div>
 
-    <div class="extra">
+    <div class="extra dark-theme">
         <div class="extra-title">
             <h1>{name}</h1>
             <img src={`/img/flags/${imgPath}.avif`} alt="" />
@@ -294,6 +296,12 @@ const {
         margin-top: 2%;
         margin-bottom: 2%;
     }
+
+    .dark-theme {
+        background-color: rgb(25, 25, 25);
+        color: rgb(240, 240, 240);
+    }
+    
 </style>
 
 <script>

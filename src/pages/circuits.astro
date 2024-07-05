@@ -14,7 +14,7 @@ import Circuit from "../components/Circuit.astro";
     </head>
 
 
-    <body>
+    <body class="dark-theme">
 
         <Navigation />
 
@@ -301,6 +301,11 @@ import Circuit from "../components/Circuit.astro";
         .item-list::-webkit-scrollbar {
             display: none;
         }
+    }
+
+    .dark-theme {
+        background-color: rgb(25, 25, 25);
+        color: rgb(240, 240, 240);
     }
 </style>
 
