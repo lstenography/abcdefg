@@ -3,6 +3,7 @@ import Navigation from "../components/Navigation.astro";
 import Footer from "../components/Footer.astro";
 import "../../styles/circuits.css";
 import "../../styles/global.css";
+import "../../scripts/circuits.js"
 import Circuit from "../components/Circuit.astro";
 ---
 
@@ -11,6 +12,7 @@ import Circuit from "../components/Circuit.astro";
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Document</title>
+        <script src="../../scripts/circuits.js"</script>
     </head>
 
 
@@ -238,7 +240,7 @@ import Circuit from "../components/Circuit.astro";
 <style>
     
     body {
-        background-color: rgb(250, 250, 250);
+        /* background-color: rgb(250, 250, 250); */
         height: auto;
         -ms-overflow-style: none;  /* IE and Edge */
         scrollbar-width: none;  /* Firefox */
@@ -303,10 +305,20 @@ import Circuit from "../components/Circuit.astro";
         }
     }
 
-    .dark-theme {
+    /* .dark-theme {
         background-color: rgb(25, 25, 25);
         color: rgb(240, 240, 240);
-    }
+    } */
 </style>
+
+<!-- <script>
+    function toggleTheme() {
+        const body = document.body;
+        body.classList.toggle("dark-theme");
+    }
+
+    // toggleTheme();
+    // toggleTheme();
+</script> -->
 
 <!-- https://medium.com/@algopoint.ltd/how-to-create-a-slideshow-carousel-using-html-css-js-7ab0561b39b3 -->
