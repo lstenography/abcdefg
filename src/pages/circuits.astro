@@ -3,7 +3,7 @@ import Navigation from "../components/Navigation.astro";
 import Footer from "../components/Footer.astro";
 import "../../styles/circuits.css";
 import "../../styles/global.css";
-import "../../scripts/circuits.js"
+
 import Circuit from "../components/Circuit.astro";
 ---
 
@@ -12,22 +12,20 @@ import Circuit from "../components/Circuit.astro";
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Document</title>
-        <script src="../../scripts/circuits.js"</script>
     </head>
 
-
-    <body class="dark-theme">
-
+    <body class="light-theme">
         <Navigation />
 
         <div class="title">
             <h1>F1 2024 Calendar</h1>
-            <p>Discover the very fast circuits of Formula 1. Discover 
-                the circuit stats and all the trackmaps, all at your hands. Pay today.</p>
+            <p>
+                Discover the very fast circuits of Formula 1. Discover the
+                circuit stats and all the trackmaps, all at your hands. Pay
+                today.
+            </p>
         </div>
 
-
-        
         <div class="circuits">
             <Circuit
                 name="Bahrain Grand Prix"
@@ -35,7 +33,6 @@ import Circuit from "../components/Circuit.astro";
                 imgPath="bahrain"
                 date="2 Mar"
                 round="1"
-
                 firstGp="2004"
                 cirLength="5.412"
                 fLap="1:31.447"
@@ -59,7 +56,7 @@ import Circuit from "../components/Circuit.astro";
                 round="3"
             />
 
-            <Circuit 
+            <Circuit
                 name="Suzuka Circuit"
                 country="Japan"
                 imgPath="japan"
@@ -91,7 +88,6 @@ import Circuit from "../components/Circuit.astro";
                 round="7"
             />
 
-
             <Circuit
                 name="Circuit de Monaco"
                 country="Monaco"
@@ -116,7 +112,7 @@ import Circuit from "../components/Circuit.astro";
                 round="10"
             />
 
-            <Circuit 
+            <Circuit
                 name="Red Bull Ring"
                 country="Austria"
                 imgPath="austria"
@@ -124,7 +120,7 @@ import Circuit from "../components/Circuit.astro";
                 round="11"
             />
 
-            <Circuit 
+            <Circuit
                 name="Silverstone Circuit"
                 country="United Kingdom"
                 imgPath="uk"
@@ -138,9 +134,9 @@ import Circuit from "../components/Circuit.astro";
                 imgPath="hungary"
                 date="21 Jul"
                 round="13"
-            />    
+            />
 
-            <Circuit 
+            <Circuit
                 name="Spa-Francorchamps"
                 country="Belgium"
                 imgPath="belgium"
@@ -148,7 +144,7 @@ import Circuit from "../components/Circuit.astro";
                 round="14"
             />
 
-            <Circuit 
+            <Circuit
                 name="Circuit Zandvoort"
                 country="Netherlands"
                 imgPath="netherlands"
@@ -156,7 +152,7 @@ import Circuit from "../components/Circuit.astro";
                 round="15"
             />
 
-            <Circuit 
+            <Circuit
                 name="Monza"
                 country="Italy"
                 imgPath="monza"
@@ -164,7 +160,7 @@ import Circuit from "../components/Circuit.astro";
                 round="16"
             />
 
-            <Circuit 
+            <Circuit
                 name="Baku City Circuit"
                 country="Azerbaijan"
                 imgPath="azerbaijan"
@@ -172,7 +168,7 @@ import Circuit from "../components/Circuit.astro";
                 round="17"
             />
 
-            <Circuit 
+            <Circuit
                 name="Marina Bay Street Circuit"
                 country="Singapore"
                 imgPath="singapore"
@@ -180,7 +176,7 @@ import Circuit from "../components/Circuit.astro";
                 round="18"
             />
 
-            <Circuit 
+            <Circuit
                 name="Circuit of the Americas"
                 country="United States"
                 imgPath="usa"
@@ -196,7 +192,7 @@ import Circuit from "../components/Circuit.astro";
                 round="20"
             />
 
-            <Circuit 
+            <Circuit
                 name="Interlagos"
                 country="Brazil"
                 imgPath="brazil"
@@ -204,7 +200,7 @@ import Circuit from "../components/Circuit.astro";
                 round="21"
             />
 
-            <Circuit 
+            <Circuit
                 name="Las Vegas Strip Circuit"
                 country="United States"
                 imgPath="vegas"
@@ -212,7 +208,7 @@ import Circuit from "../components/Circuit.astro";
                 round="22"
             />
 
-            <Circuit 
+            <Circuit
                 name="Losail Circuit"
                 country="Qatar"
                 imgPath="qatar"
@@ -227,8 +223,6 @@ import Circuit from "../components/Circuit.astro";
                 date="8 Dec"
                 round="24"
             />
-
-            
         </div>
 
         <div class="circuits"></div>
@@ -238,12 +232,11 @@ import Circuit from "../components/Circuit.astro";
 </html>
 
 <style>
-    
     body {
         /* background-color: rgb(250, 250, 250); */
         height: auto;
-        -ms-overflow-style: none;  /* IE and Edge */
-        scrollbar-width: none;  /* Firefox */
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
         ::-webkit-scrollbar {
             display: none;
         }
@@ -269,7 +262,6 @@ import Circuit from "../components/Circuit.astro";
             font-family: f1-turbo, f1-torque, f1-reg;
             font-size: 2.3rem;
             margin: 0;
-            
         }
         p {
             font-family: f1-reg, f1-torque;
@@ -278,7 +270,6 @@ import Circuit from "../components/Circuit.astro";
             margin-right: 1vw;
         }
     }
-
 
     .circuits {
         display: grid;
@@ -311,14 +302,20 @@ import Circuit from "../components/Circuit.astro";
     } */
 </style>
 
-<!-- <script>
-    function toggleTheme() {
+<script>
+    function changeTheme() {
         const body = document.body;
-        body.classList.toggle("dark-theme");
+        const dark_theme = document.querySelector(".dark-theme");
+        const light_theme = document.querySelector(".light-theme");
+
+        if (body.classList.contains("dark_theme")) {
+            body.classList.add("light_theme");
+            body.classList.remove("dark_theme");
+        } else {
+            body.classList.add("dark_theme");
+            body.classList.remove("light_theme");
+        }
     }
 
-    // toggleTheme();
-    // toggleTheme();
-</script> -->
-
-<!-- https://medium.com/@algopoint.ltd/how-to-create-a-slideshow-carousel-using-html-css-js-7ab0561b39b3 -->
+    changeTheme();
+</script>

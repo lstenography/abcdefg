@@ -32,9 +32,9 @@ body {
 
 .dark-theme {
   background-color: rgb(25, 25, 25);
-  color: rgb(250, 250, 250);
+  color: rgb(240, 240, 240);
 }
 .light-theme {
-  background-color: rgb(250, 250, 250);
+  background-color: rgb(240, 240, 240);
   color: rgb(25, 25, 25);
 }
