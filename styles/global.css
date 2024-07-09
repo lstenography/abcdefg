@@ -29,8 +29,18 @@ body {
   font-family: jetBrains, "Courier New", Courier, monospace;
 }
 
+:root {
+  --bg-color: rgb(240, 240, 240);
+  --font-color: rgb(25, 25, 25);
+}
 
-.dark-theme {
+[data-theme="dark"] {
+  --bg-color: rgb(25, 25, 25);
+  --font-color: rgb(240, 240, 240);
+}
+
+
+/* .dark-theme {
   background-color: rgb(25, 25, 25);
   color: rgb(240, 240, 240);
 }
@@ -38,3 +48,4 @@ body {
   background-color: rgb(240, 240, 240);
   color: rgb(25, 25, 25);
 }
+ */
