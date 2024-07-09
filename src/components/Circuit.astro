@@ -28,7 +28,7 @@ const {
 } = Astro.props;
 ---
 
-<div class="cir light-theme">
+<div class="cir">
     <div class="locations">
         <div class="text">
             <h2 class="name">{name}</h2>
@@ -48,7 +48,7 @@ const {
         <h1 class="round">Round {round}</h1>
     </div>
 
-    <div class="extra light-theme">
+    <div class="extra">
         <div class="extra-title">
             <h1>{name}</h1>
             <img src={`/img/flags/${imgPath}.avif`} alt="" />
@@ -101,8 +101,8 @@ const {
         border-style: solid;
         border-color: #b4b4b6;
 
-        /* background-color: rgb(250, 250, 250); */
-        /* color: black; */
+        background-color: var(--bg-color);
+        color: var(--font-color);
 
         .locations {
             display: flex;
@@ -181,7 +181,8 @@ const {
         left: 0;
         border-top-right-radius: 35px;
 
-        /* background-color: rgb(250, 250, 250); */
+        background-color: var(--bg-color);
+        color: var(--font-color);
         z-index: 10;
 
         p {
