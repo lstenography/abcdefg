@@ -3,28 +3,39 @@
 ---
 
 <header>
-    <img src="/img/f1.png" alt="">
+    <img src="/img/f1.png" alt="" />
     <div class="text">
         <h1>Teams</h1>
         <h1>Circuits</h1>
         <div class="theme-switch-wrapper">
             <label class="theme-switch" for="checkbox">
+                <!-- <img src="public/img/moon-svgrepo-com.svg" alt=""> -->
                 <input type="checkbox" id="checkbox" />
-                <!-- <div class="slider round"></div> -->
-          </label>
-          <em>Enable Dark Mode!</em>
+                <div class="slider round"></div>
+            </label>
+            <!-- <em>Enable Dark Mode!</em> -->
         </div>
     </div>
 </header>
 
-
 <style>
     header {
+
+        /* label {
+            img {
+                width: 35px;
+                
+            }
+            #checkbox {
+                display: hidden;
+            }
+        } */
+
         display: flex;
 
         background-color: #b40000;
 
-        gap: 70vw;
+        gap: 65vw;
 
         img {
             height: 8vh;
@@ -41,5 +52,7 @@
             color: white;
         }
 
+        .theme-switch-wrapper {
+        }
     }
 </style>
