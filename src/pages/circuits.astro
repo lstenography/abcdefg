@@ -14,7 +14,7 @@ import Circuit from "../components/Circuit.astro";
         <title>Document</title>
     </head>
 
-    <body >
+    <body>
         <Navigation />
 
         <div class="title">
@@ -123,7 +123,8 @@ import Circuit from "../components/Circuit.astro";
                 country="Monaco"
                 imgPath="monaco"
                 date="26 may"
-                round="8"firstGp="2004"
+                round="8"
+                firstGp="2004"
                 cirLength="5.412"
                 fLap="1:31.447"
                 lapNum="57"
@@ -342,6 +343,14 @@ import Circuit from "../components/Circuit.astro";
         <div class="circuits"></div>
 
         <Footer />
+
+        <div class="theme-switch-wrapper">
+            <label class="theme-switch" for="checkbox">
+                <input type="checkbox" id="checkbox" />
+                <div class="slider round"></div>
+          </label>
+          <em>Enable Dark Mode!</em>
+        </div>
     </body>
 </html>
 
@@ -410,26 +419,77 @@ import Circuit from "../components/Circuit.astro";
         }
     }
 
-    /* .dark-theme {
-        background-color: rgb(25, 25, 25);
-        color: rgb(240, 240, 240);
-    } */
+    .theme-switch-wrapper {
+        display: flex;
+        align-items: center;
+
+        em {
+            margin-left: 10px;
+            font-size: 1rem;
+        }
+    }
+    .theme-switch {
+        display: inline-block;
+        height: 34px;
+        position: relative;
+        width: 60px;
+    }
+
+    .theme-switch input {
+        display: none;
+    }
+
+    .slider {
+        background-color: #ccc;
+        bottom: 0;
+        cursor: pointer;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        transition: 0.4s;
+    }
+
+    .slider:before {
+        background-color: #fff;
+        bottom: 4px;
+        content: "";
+        height: 26px;
+        left: 4px;
+        position: absolute;
+        transition: 0.4s;
+        width: 26px;
+    }
+
+    input:checked + .slider {
+        background-color: #66bb6a;
+    }
+
+    input:checked + .slider:before {
+        transform: translateX(26px);
+    }
+
+    .slider.round {
+        border-radius: 34px;
+    }
+
+    .slider.round:before {
+        border-radius: 50%;
+    }
 </style>
 
-<script is:inline>
-    function changeTheme() {
-        const body = document.body;
-        const dark_theme = document.querySelector(".dark-theme");
-        const light_theme = document.querySelector(".light-theme");
+<script>
+    const toggleSwitch = document.querySelector(
+        '.theme-switch input[type="checkbox"]',
+    );
 
-        if (body.classList.contains("dark_theme")) {
-            body.classList.add("light_theme");
-            body.classList.remove("dark_theme");
+    function switchTheme(e) {
+        if (e.target.checked) {
+            document.documentElement.setAttribute("data-theme", "dark");
         } else {
-            body.classList.add("dark_theme");
-            body.classList.remove("light_theme");
+            document.documentElement.setAttribute("data-theme", "light");
         }
     }
 
-    changeTheme();
+    toggleSwitch.addEventListener("change", switchTheme, false);
 </script>
