@@ -1,5 +1,7 @@
 ---
 
+import "../../styles/global.css";
+
 interface Props {
   team: string;
   points: string;
@@ -135,6 +137,13 @@ const {team, points, url_team, fname_1, sname_1, fname_2, sname_2, country1, pod
   
   <style>
 
+    h1 {
+      color: var(--font-color);
+    }
+    p {
+      color: var(--font-color);
+    }
+
     .slide1 {
       display: flex;
       flex-direction: column;
@@ -155,6 +164,7 @@ const {team, points, url_team, fname_1, sname_1, fname_2, sname_2, country1, pod
         h1 {
           font-size: 3rem;
           font-family: f1-torque;
+          
 
           margin: 0;
 
@@ -278,7 +288,7 @@ const {team, points, url_team, fname_1, sname_1, fname_2, sname_2, country1, pod
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: white;
+    background-color: var(--bg-color);
   }
   
   .carousel-view {
@@ -323,7 +333,7 @@ const {team, points, url_team, fname_1, sname_1, fname_2, sname_2, country1, pod
     scroll-snap-align: center;
     min-width: 40vw;
     height: 40vh;
-    background-color: rgb(250, 250, 250);
+    background-color: var(--bg-color);
 
     border-top-right-radius: 35px;
     border-color: #b4b4b6;

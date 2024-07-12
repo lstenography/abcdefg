@@ -92,26 +92,169 @@ import "../../styles/global.css";
       />
 
       <Team
-        team="Mclaren"
-        points="295"
-        url_team="mclaren"
-        fname_1="Lando"
-        sname_1="Norris"
-        fname_2="Oscar"
-        sname_2="Piastri"
+        team="Mercedes"
+        points="221"
+        url_team="mercedes"
+        fname_1="Lewis"
+        sname_1="Hamilton"
+        fname_2="George"
+        sname_2="Russell"
         country1="United Kingdom"
-        podiums1="47"
-        points1="208"
+        podiums1="84"
+        points1="151"
         gp1="128"
         dob1="2001"
         country2="Australia"
-        podiums2="7"
-        points2="87"
-        gp2="3"
+        podiums2="5"
+        points2="70"
+        gp2="4"
         dob2="2000"
-        driverurl1="lando"
-        driverurl2="oscar"
+        driverurl1="lewis"
+        driverurl2="george"
       />
+    </div>
+
+    <div class="teams">
+      <Team
+        team="Aston Martin"
+        points="68"
+        url_team="aston-martin"
+        fname_1="Fernando"
+        sname_1="Alonso"
+        fname_2="Lance"
+        sname_2="Stroll"
+        country1="Spain"
+        podiums1="24"
+        points1="40"
+        gp1="129"
+        dob1="1987"
+        country2="Australia"
+        podiums2="6"
+        points2="28"
+        gp2="10"
+        dob2="2000"
+        driverurl1="fernando"
+        driverurl2="lance"
+      />
+
+      <Team
+        team="RB"
+        points="31"
+        url_team="rb"
+        fname_1="Yuki"
+        sname_1="Tsunoda"
+        fname_2="Daniel"
+        sname_2="Ricciardo"
+        country1="Japan"
+        podiums1="2"
+        points1="15"
+        gp1="90"
+        dob1="2000"
+        country2="Australia"
+        podiums2="9"
+        points2="16"
+        gp2="54"
+        dob2="1985"
+        driverurl1="yuki"
+        driverurl2="daniel"
+      />
+      
+    </div>
+
+
+    <div class="teams">
+      <Team
+        team="Haas"
+        points="27"
+        url_team="haas"
+        fname_1="Nico"
+        sname_1="Hulkenburg"
+        fname_2="Kevin"
+        sname_2="Magnussen"
+        country1="Germany"
+        podiums1="2"
+        points1="15"
+        gp1="177"
+        dob1="1987"
+        country2="Norway"
+        podiums2="1"
+        points2="12"
+        gp2="120"
+        dob2="2000"
+        driverurl1="nico"
+        driverurl2="kevin"
+      />
+
+      <Team
+        team="Alpine"
+        points="9"
+        url_team="alpine"
+        fname_1="Pierre"
+        sname_1="Gasly"
+        fname_2="Esteban"
+        sname_2="Ocon"
+        country1="France"
+        podiums1="0"
+        points1="4"
+        gp1="90"
+        dob1="2000"
+        country2="France"
+        podiums2="0"
+        points2="0"
+        gp2="88"
+        dob2="1985"
+        driverurl1="pierre"
+        driverurl2="esteban"
+      />
+      
+    </div>
+
+
+    <div class="teams">
+      <Team
+        team="Williams"
+        points="4"
+        url_team="williams"
+        fname_1="Alexander"
+        sname_1="Albon"
+        fname_2="Logan"
+        sname_2="Seargent"
+        country1="Thailand"
+        podiums1="2"
+        points1="15"
+        gp1="177"
+        dob1="1987"
+        country2="US"
+        podiums2="1"
+        points2="12"
+        gp2="120"
+        dob2="2000"
+        driverurl1="alexander"
+        driverurl2="logan"
+      />
+
+      <Team
+        team="Kick Sauber"
+        points="0"
+        url_team="kick-sauber"
+        fname_1="Valtteri"
+        sname_1="Bottas"
+        fname_2="Zhou"
+        sname_2="Guanyu"
+        country1="Finland"
+        podiums1="0"
+        points1="0"
+        gp1="90"
+        dob1="2000"
+        country2="China"
+        podiums2="0"
+        points2="0"
+        gp2="88"
+        dob2="1985"
+        driverurl1="valtteri"
+        driverurl2="zhou"
+      />
+      
     </div>
 
   </body>
@@ -120,6 +263,11 @@ import "../../styles/global.css";
 </html>
 
 <style>
+
+  body {
+    background-color: var(--bg-color);
+  }
+
   .title {
     display: inline-flex;
     flex-direction: column;
@@ -140,12 +288,14 @@ import "../../styles/global.css";
       font-family: f1-turbo, f1-torque, f1-reg;
       font-size: 2.3rem;
       margin: 0;
+      color: var(--font-color);
     }
     p {
       font-family: f1-reg, f1-torque;
       font-size: 1.6rem;
       font-weight: 500;
       margin-right: 1vw;
+      color: var(--font-color);
     }
   }
 
@@ -157,3 +307,19 @@ import "../../styles/global.css";
     margin: 1vw;
   }
 </style>
+
+<script>
+  const toggleSwitch = document.querySelector(
+      '.theme-switch input[type="checkbox"]',
+  );
+
+  function switchTheme(e) {
+      if (e.target.checked) {
+          document.documentElement.setAttribute("data-theme", "dark");
+      } else {
+          document.documentElement.setAttribute("data-theme", "light");
+      }
+  }
+
+  toggleSwitch.addEventListener("change", switchTheme, false);
+</script>
