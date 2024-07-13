@@ -474,17 +474,16 @@ import Circuit from "../components/Circuit.astro";
 </style>
 
 <script>
-    const toggleSwitch = document.querySelector(
-        '.theme-switch input[type="checkbox"]',
-    );
+        const toggleButton = document.getElementById('theme-toggle-button');
 
-    function switchTheme(e) {
-        if (e.target.checked) {
-            document.documentElement.setAttribute("data-theme", "dark");
-        } else {
-            document.documentElement.setAttribute("data-theme", "light");
+        function switchTheme() {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            if (currentTheme === 'dark') {
+                document.documentElement.setAttribute('data-theme', 'light');
+            } else {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            }
         }
-    }
 
-    toggleSwitch.addEventListener("change", switchTheme, false);
-</script>
+        toggleButton.addEventListener('click', switchTheme, false);
+    </script>
