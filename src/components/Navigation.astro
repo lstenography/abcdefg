@@ -5,13 +5,15 @@
 <header>
     <img src="/img/f1.png" alt="" />
     <div class="text">
-        <h1>Teams</h1>
-        <h1>Circuits</h1>
+        <a href="/home/user/abcdefg/src/pages/teams.astro">Teams</a>
+        <a href="/home/user/abcdefg/src/pages/circuits.astro">Circuits</a>
         <div class="theme-switch-wrapper">
             <label class="theme-switch" for="checkbox">
                 <!-- <img src="public/img/moon-svgrepo-com.svg" alt=""> -->
                 <input type="checkbox" id="checkbox" />
-                <div class="slider round"></div>
+                <div class="slider round">
+                    <p>Dark/light</p>
+                </div>
             </label>
             <!-- <em>Enable Dark Mode!</em> -->
         </div>
@@ -50,6 +52,12 @@
             font-size: 1.2rem;
             font-family: f1-reg;
             color: white;
+
+            a {
+                text-decoration: none;
+                color: white;
+                font-size: 2rem;
+            }
         }
 
         .theme-switch-wrapper {
